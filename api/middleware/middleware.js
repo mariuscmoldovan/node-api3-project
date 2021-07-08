@@ -36,7 +36,7 @@ function validateUser(req, res, next) {
   // DO YOUR MAGIC
   const { name } = req.body
     if (!name || !name.trim()) {
-      res.status(404).json({
+      res.status(400).json({
         message: "missing required name field"  
       })
     }else {
